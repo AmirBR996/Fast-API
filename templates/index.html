@@ -82,7 +82,8 @@ async function predict() {
     };
 
     try {
-        const response = await fetch("http://127.0.0.1:8000/predict", {
+        const apiUrl = `${window.location.protocol}//${window.location.host}/predict`;
+        const response = await fetch(apiUrl, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
